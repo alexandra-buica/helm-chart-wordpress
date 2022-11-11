@@ -9,4 +9,4 @@ mysql:
   name: mysql
   image:
     name: mysql
-    tag: "8.0"
+    tag: latest
