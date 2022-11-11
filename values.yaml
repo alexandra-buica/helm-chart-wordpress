@@ -9,4 +9,4 @@ mysql:
   name: mysql
   image:
     name: mysql
-    tag: "5.6"
+    tag: "8.0"
