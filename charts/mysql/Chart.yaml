@@ -1,0 +1,4 @@
+apiVersion: v2
+name: mysql
+version: 0.0.1
+description: This is MySQL helm chart that helps to deploy Wordpress application.

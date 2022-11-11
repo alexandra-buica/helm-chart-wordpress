@@ -1,0 +1,12 @@
+wordpress:
+  name: wordpress
+
+  image:
+    name: wordpress
+    tag: latest
+
+mysql:
+  name: mysql
+  image:
+    name: mysql
+    tag: "5.6"

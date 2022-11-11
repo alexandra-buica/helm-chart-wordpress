@@ -1,0 +1,7 @@
+apiVersion: v2
+name: wordpress
+version: 0.0.1
+description: This is Wordpress helm chart that helps to deploy Wordpress application.
+dependencies:
+  - name: mysql
+    version: 0.0.1

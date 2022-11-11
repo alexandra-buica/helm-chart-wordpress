@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.wordpress.name }}
+  labels:
+    app: {{ .Values.wordpress.name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.wordpress.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.wordpress.name }}
+    spec:
+      containers:
+      - image: {{ .Values.wordpress.image.name }}:{{ .Values.wordpress.image.tag }}
+        name: {{ .Values.wordpress.name }}
+        envFrom:
+        - configMapRef:
+            name: {{ .Values.wordpress.name }}
+        - secretRef:
+            name: {{ .Values.wordpress.name }}
+        ports:
+        - containerPort: 80
+          name: {{ .Values.wordpress.name }}
