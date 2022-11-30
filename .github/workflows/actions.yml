@@ -6,14 +6,14 @@ jobs:
   wordpress-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Helm template
-        run: |
-          ls -alh
+      - name: List files
+        run: ls -alh
       - name: Checkout
         uses: actions/checkout@v1
       - name: List again files after checkout
-        run: 
-          ls -alh
+        run: ls -alh
+      - name: Apply the helm template
+        run: helm template . | kubectl apply -f -
 
 
 
