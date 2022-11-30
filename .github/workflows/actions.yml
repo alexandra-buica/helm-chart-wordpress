@@ -1,0 +1,14 @@
+name: Wordpress Workflow
+
+on: push
+
+jobs:
+  wordpress-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Helm template
+        run: |
+          helm template . | k apply -f -
+
+
+
