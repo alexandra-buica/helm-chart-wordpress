@@ -9,7 +9,11 @@ jobs:
       - name: Helm template
         run: |
           ls -alh
-          helm template . | kubectl apply -f -
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: List again files after checkout
+        run: 
+          ls -alh
 
 
 
