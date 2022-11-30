@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Helm template
         run: |
+          ls -alh
           helm template . | kubectl apply -f -
 
 
